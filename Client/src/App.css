@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Work+Sans:wght@300&display=swap');
+
+:root {
+    --main-bg: #050a32;
+    --tile-bg: #194e64;
+    --tile-bg-hover: #123747;
+    --strike-color: #00fff7;
+    --game-over-border: #5C469C;
+    --game-reset-button: #03143d;
+    --game-reset-button-hover: #0c0d27;
+    --icons: #D4ADFC;
+    --pure-white: #ffffff;
+}
+
+body {
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--pure-white);
+}

@@ -1,0 +1,210 @@
+.tictactoe-container {
+  width: 720px;
+  max-width: 720px;
+}
+@media (max-width: 720px) {
+  .tictactoe-container {
+    width: 520px;
+  }
+}
+@media (max-width: 520px) {
+  .tictactoe-container {
+    width: 420px;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left {
+  cursor: pointer;
+}
+.right button {
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 5px 0px;
+  border: var(--game-over-border) 4px;
+  border-style: dotted;
+  background-color: var(--game-reset-button);
+  color: white;
+  width: 100px;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.right button:hover {
+  border-color: var(--icons);
+  background-color: var(--game-reset-button-hover);
+}
+
+.game-board {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.tile-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  border: 2px solid white;
+  position: relative;
+  width: fit-content;
+}
+
+.tile {
+  background-color: var(--tile-bg);
+  cursor: pointer;
+  font-size: 3em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  box-shadow: inset 2px 3px 4px 1px rgb(0, 0, 0);
+}
+
+.tile:hover {
+  background-color: var(--tile-bg-hover);
+}
+
+/* X - O  Hovers */
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.2;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.2;
+}
+
+/* Strike */
+.strike {
+  position: absolute;
+  background-color: var(--strike-color);
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 17%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 50%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 85%;
+}
+
+.strike-col-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+
+.strike-col-2 {
+  height: 100%;
+  width: 4px;
+  left: 50%;
+}
+
+.strike-col-3 {
+  height: 100%;
+  width: 4px;
+  left: 85%;
+}
+
+.strike-diag-1 {
+  width: 90%;
+  height: 6px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diag-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+/* Game Over */
+.game-over {
+  text-align: center;
+  border: var(--game-over-border) 8px;
+  border-style: dotted;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* Starting Player */
+.starting-player > h2 {
+  margin-top: 50px;
+}
+
+/* Turn Indicator */
+.turn-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  cursor: pointer;
+  margin: 10px 5px;
+  border: var(--game-over-border) 8px;
+  border-style: dotted;
+  background-color: var(--game-reset-button);
+  color: white;
+  width: 250px;
+  font-weight: 900;
+  font-size: 1.5em;
+  height: 100px;
+}
+.turn-indicator p{
+    margin-top: 15px;
+}
+.turn-indicator-state{
+    margin-top: -50px;
+    font-size: 2.5em;
+}
+.turn-indicator:hover{
+    border-color: var(--icons);
+    background-color: var(--game-reset-button-hover);
+}
+/* Buttons */
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player-button {
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 20px 0px;
+  border: var(--game-over-border) 8px;
+  border-style: dotted;
+  background-color: var(--game-reset-button);
+  color: white;
+  width: 200px;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.player-button:hover {
+  border-color: var(--icons);
+  background-color: var(--game-reset-button-hover);
+}
